@@ -38,5 +38,12 @@ bool Truck::leave()
 }
 void Truck::SetLoad(double load)
 {
-	this->load = load;
+	if (load <= Base::goods_on_base)
+	{
+		this->load = load;
+	}
+	else
+	{
+		cout << "Error. Wrong num of load" << endl;
+	}
 }

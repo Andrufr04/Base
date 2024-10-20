@@ -38,7 +38,14 @@ bool Bus::leave()
 }
 void Bus::setPeople(int people)
 {
-	this->people = people;
+	if (people <= Base::people_on_base)
+	{
+		this->people = people;
+	}
+	else
+	{
+		cout << "Error. Wrong num of people" << endl;
+	}
 }
 
 

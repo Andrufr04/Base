@@ -25,9 +25,9 @@ bool Vehicle::leave()
     bool rez;
     double required_fuel = tank_volume - petrol_amount;
 
-    if (Base::petrol_on_base < required_fuel) 
+    if (Base::petrol_on_base < required_fuel || Base::people_on_base < 1) 
     {
-        cout << "Not enough fuel. Unable to leave" << endl;
+        cout << " Unable to leave" << endl;
         rez = false;
     }
     else
